@@ -6,7 +6,7 @@ const remove = async () => {
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
 
-    const fileToRemovePath = path.join(__dirname, 'files_copy', 'fileToRemove.txt');
+    const fileToRemovePath = path.join(__dirname, 'files', 'fileToRemove.txt');
 
     if (!fs.existsSync(fileToRemovePath)) {
         throw new Error('FS operation failed');
