@@ -14,7 +14,9 @@ const rename = async () => {
     }
 
     try {
-        fs.renameSync(wrongFilePath, correctFilePath);
+        fs.rename(wrongFilePath, correctFilePath, () => {
+            console.log('file renamed');
+        });
     } catch (error) {
         console.log(error);
     }
